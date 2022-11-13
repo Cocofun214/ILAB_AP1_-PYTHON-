@@ -94,3 +94,44 @@ def main():
     print('Baris {}: {}'.format(2,dim2))
     print('Baris {}: {}'.format(3,dim3))
 main()
+
+ 
+ 
+ --- Prelab 5.2 ----
+ 
+
+== 1 ==
+
+# Program ini meminta pengguna memasukkan tiga buah angka float
+# dan menuliskan keduanya, masing-masing dalam satu baris, 
+# ke file angka.txt
+def main():
+    j = float(input('Masukkan sebuah angka desimal: '))
+    o = float(input('Masukkan sebuah angka desimal lainnya: '))
+    n = float(input('Masukkan sebuah angka desimal lainnya: '))
+    k = open('angka.txt', 'w')
+    k.write(str(j)+'\n')
+    k.write(str(o)+'\n')
+    k.write(str(n)+'\n')
+    k.close()
+    print('Data telah berhasil disimpan dalam file angka.txt.')
+main()
+
+
+
+== 2==
+
+# Program ini membaca isi file angka_float.txt
+# dan mengalikan angka yang terdapat dalam file tersebut
+def main():
+    j = open('angka_float.txt', 'r')
+    o = float(j.readline())
+    n = float(j.readline())
+    j.close()
+    
+    t = o*n
+    print(f'Baris 1 file angka_float.txt berisi: {o}')
+    print(f'Baris 2 file angka_float.txt berisi: {n}')
+    print(f'Hasil kali baris 1 dan baris 2 = {t:.2f}')
+main()
+
