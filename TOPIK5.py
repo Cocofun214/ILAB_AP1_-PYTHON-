@@ -135,3 +135,56 @@ def main():
     print(f'Hasil kali baris 1 dan baris 2 = {t:.2f}')
 main()
 
+
+
+----- Prelab 5.3 ------
+
+
+== 1 ==
+
+import random
+def main():
+    x = open('daftar_angka.txt', 'w')
+    for i in range(1, 101):
+        x.write(str(i) + '\n')
+    x.close()
+            
+main()
+
+
+== 2 ==
+
+def main():
+    a = 0.0
+    b = 0.0
+    x = open('sales.txt', 'r')
+    baris = x.readline()
+    while baris != '':
+        a = a + float(baris)
+        b = b + 1
+        baris = x.readline()
+        avg = a / b
+    print(f'Rata-rata penjualan: {avg:,.2f}')
+# Panggil fungsi main
+main()
+
+
+== 3 ==
+
+def main():
+    a = 0.0
+    b = 0
+    x = open('sales.txt', 'r')
+    for baris in x:
+        a = a + float(baris)
+        b = b + 1
+        avg = a / b
+    print(f'Rata-rata penjualan: {avg:,.2f}')
+main()
+
+
+
+
+------------- Prelab 5.4 ------------------
+
+
